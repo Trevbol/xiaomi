@@ -15,7 +15,7 @@ a{
 .head{
     width: 1226px;
     height: 100%;
-    background: #333333;;
+    background: #333333;
     margin: 0 auto;
 }
 .head_left{
@@ -62,6 +62,19 @@ a{
     background: #424242;
     float: right;
     cursor: pointer;
+    position: relative;
+    z-index: 555;
+}
+.box_Eject{
+    width: 318px;
+    height: 0px;
+    background: #fff;
+    position: absolute;
+    bottom: 0px;
+    right: 0;
+    overflow: hidden;
+    transition: all 0.3s 0.1s;
+    z-index: 455;
 }
 .class5:hover{
     background: #FFFFFF;
@@ -424,7 +437,7 @@ a{
     width: 100%;
     height: 674px;
     background: #F5F5F5;
-    margin-top: 30px;
+/*     margin-top: 30px; */
 }
 .blick-box{
     width: 1226px;
@@ -466,6 +479,7 @@ a{
     line-height: 26px;
     border-bottom: 2px solid 0;
     cursor: pointer;
+    position: 
 }
 .blick-box-top-right_wenzi1{
     margin-left: 30px;
@@ -490,12 +504,24 @@ a{
     width: 234px;
     height: 614px;
     float: left;
+    transition: all 5s 0.1s;
 }
 .blick-box-bottom_right{
     width: 978px;
     height: 614px;
     float: right;
+    z-index:10;
 }
+.blick-box-bottom_right{
+    width: 978px;
+    height: 614px;
+    background: red;
+    position: absolute;
+    right:0;
+    bottom: 0;
+    z-index: 5;
+}
+
 .blick-box-bottom li{
     width: 234px;
     height: 300px;
@@ -505,7 +531,7 @@ a{
     margin-bottom: 14px;
     position: relative;
     overflow: hidden;
-    transition: all 0.2s;
+    transition: all 0.8s;
 }
 .blick-box-bottom_right_yangshi2{
     /* width: 234px; */
@@ -526,6 +552,7 @@ a{
     position: absolute;
     right: 0;
     bottom: 143px;
+    transition: all 0.6s 0.1s;
 }
 .bottom_right_little-box2{
     width: 234px;
@@ -534,6 +561,13 @@ a{
     position: absolute;
     right: 0;
     bottom: 0;
+    transition: all 0.6s 0.1s;
+}
+.bottom_right_little-box2 a{
+    color: #484848;
+}
+.bottom_right_little-box2 a:nth-child(2){
+    color: #B5B5B5;
 }
 .bottom_right_little-box2_left{
     width: 117px;
@@ -566,6 +600,7 @@ a{
 }
 .blick-box-bottom_right li:hover{
     box-shadow: 0 8px 10px 2px rgba(0, 0, 0, 0.1);
+    transform: translateY(-2px);
 }
 .blick-box-bottom_right li:hover .Popup1{
     bottom: 0;
@@ -575,9 +610,11 @@ a{
 }
 .blick-box-bottom_right_little-box:hover{
     box-shadow: 0 4px 10px 2px rgba(0, 0, 0, 0.1);
+    transform: translateY(-2px);
 }
 .bottom_right_little-box2:hover{
     box-shadow: 0 4px 10px 2px rgba(0, 0, 0, 0.1);
+    transform: translateY(-2px);
 }
 .Popup1{
     width: 234px;
@@ -586,7 +623,7 @@ a{
     position: absolute;
     left: 0;
     bottom: -76px;
-    transition: all 0.2s;
+    transition: all 0.6s;
     overflow: hidden;
 }
 .Popup1_wenzi1{
@@ -694,9 +731,11 @@ a{
 .blick-box-bottom_img{
     width: 234px;
     height: 300px;
+    transition: all 0.8s 0.1s;
 }
 .blick-box-bottom_img:hover{
     box-shadow: 0 8px 10px 2px rgba(0, 0, 0, 0.1);
+    transform: translateY(-2px);
 }
 .blick-box-bottom_img img{
     width: 234px;
@@ -755,7 +794,7 @@ a{
 .banner{
     width: 1226px;
     height: 460px;
-    background: #625c52;
+    /*background: #625c52;*/
     margin: 0 auto;
     position: relative;
 }
@@ -769,7 +808,7 @@ a{
 .banner_img li{
     width: 100%;
     height: 100%;
-    background: green;
+    /*background: green;*/
     position: absolute;
     left: 0;
     top: 0;
@@ -785,6 +824,7 @@ a{
     position: absolute;
     left: 234px;
     top: 230px;
+    z-index: 602;
 /*     background-color: pink; */
 }
 .ui-prev:hover{
@@ -797,6 +837,7 @@ a{
     position: absolute;
     right: 0;
     top: 230px;
+    z-index: 602;
 }
 .ui-next:hover{
     background: url('../img/icon-slides.png') no-repeat -42px 0px;
@@ -808,7 +849,19 @@ a{
     position: absolute;
     left: 0;
     top: 0;
+    z-index: 999;
 }
+.box_Eject_1{
+    width: 992px;
+    height: 460px;
+    background: red;
+    position: absolute;
+    top:0;
+    left:234px;
+    display: none;
+    z-index: 585;
+}
+
 .aside li{
     width: 234px;
     height: 42px;
@@ -845,22 +898,29 @@ a{
     height: 10px;
 /*     background: yellow; */
     position:absolute;
-    right: 35px;
+    left: 1000px;
     bottom: 25px;
+    z-index: 602;
+
 }
-.ui-pager-quan{
+
+.ui-pager div{
     width: 6px;
     height: 6px;
-    background: #92897c;
+    background: YELLOW;
     border-radius: 50%;
     border: 2px solid #bbb3a7;
-    float: right;
+    float: left;
     margin-left: 10px;
     cursor: pointer;
 }
-.ui-pager-quan:hover{
-    background: #f8efe2;
-}
+.ui-pager .hot{
+     background: green;
+     z-index: 604;
+ }
+/*.ui-pager div:hover{*/
+    /*background: #f8efe2;*/
+/*}*/
 
 /* 推荐列表 */
 .bigRecommend{
@@ -902,9 +962,11 @@ a{
     background: #FFFFFF;
     float: left;
     margin-right: 14px;
+    transition: all 0.6s 0.1s;
 }
 .Recommend-feet li:hover{
     box-shadow: 0 8px 10px 2px rgba(0, 0, 0, 0.1);
+    transform: translateY(-2px);
 }
 .Recommend-feet li:last-child{
     margin-right: 0;
@@ -1026,9 +1088,11 @@ a{
     background: #FFFFFF;
     float: left;
     margin-right: 14px;
+    transition: all 0.6s 0.1s;
 }
 .review_bottom_box:hover{
-    box-shadow: 0 8px 10px 2px rgba(0, 0, 0, 0.1);   
+    box-shadow: 0 8px 10px 4px rgba(0, 0, 0, 0.3);
+    transform: translateY(-2px);  
 }
 .review_bottom li:last-child{
     margin-right: 0px;
@@ -1137,9 +1201,11 @@ a{
     margin-right: 14px;
     border-top: 1px solid #FFAC13;
     position: relative;
+    transition: all 0.6s 0.1s;
 }
 .content_bottom_box:hover{
-    box-shadow: 0 8px 10px 2px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 8px 10px 4px rgba(0, 0, 0, 0.1);
+    transform: translateY(-2px);
 }
 .content_bottom li:last-child{
     margin-right: 0;
@@ -1332,9 +1398,11 @@ a{
     float: left;
     margin-right: 14px;
     position: relative;
+    transition: all 0.6s 0.1s;
 }
 .Visual_screen_bottom_box:hover{
-    box-shadow: 0 8px 10px 2px rgba(0, 0, 0, 0.1);    
+    box-shadow: 0 8px 15px 2px rgba(0, 0, 0, 0.1);
+    transform: translateY(-2px);    
 }
 .Visual_screen_bottom_box1{
     margin-right: 0;
@@ -1845,6 +1913,10 @@ a{
     background: pink;
     float: left;
     margin-right: 15px;
+    transition: all 0.6s 0.1s;
+}
+.Fastselection_right_box:hover{
+    box-shadow: 0 5px 15px 3px rgba(0, 0, 0, 0.2)
 }
 .Fastselection_right_box img{
     width: 316px;
