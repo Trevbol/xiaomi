@@ -1,8 +1,8 @@
 window.onload=function () {
     let Eject=document.getElementsByClassName("box_Eject")[0];
-    console.log(Eject);
+    // console.log(Eject);
     let class5=document.getElementsByClassName("class5")[0];
-    console.log(class5);
+    // console.log(class5);
     class5.onmouseenter=function () {
         Eject.style.height = "98px";
         Eject.style.bottom="-98px";
@@ -29,7 +29,7 @@ window.onload=function () {
     let blick=document.getElementsByClassName("blick-box")[0];
     // console.log(blick);
     let blickBoxR=blick.getElementsByClassName("blick-box-top-right")[0];
-    console.log(blickBoxR);
+    // console.log(blickBoxR);
     let li1=blickBoxR.getElementsByTagName("li");
     // console.log(li1);
 
@@ -51,7 +51,7 @@ window.onload=function () {
     let li2=bannerImg.getElementsByTagName("li");
     let uiPager=document.getElementsByClassName("ui-pager")[0];
     let quanA=uiPager.getElementsByTagName("div");
-    console.log(quanA);
+    // console.log(quanA);
 
     let num=0;
     let FX=setInterval(imgX,1500);
@@ -89,7 +89,7 @@ window.onload=function () {
 
     let Prev=document.getElementsByClassName("ui-prev")[0];
     let Next=document.getElementsByClassName("ui-next")[0];
-    console.log(Prev,Next);
+    // console.log(Prev,Next);
     
     Prev.onclick=function () {
         imgY();
@@ -108,9 +108,176 @@ window.onload=function () {
              num = i;
          }
      }
+    /*let SmallBox=document.querySelector(".contentSmallBox");
+    let ButtonLeft=document.querySelector(".ButtonLeft");
+    let ButtonRight=document.querySelector(".ButtonRight");
+    let imgBox=document.querySelectorAll(".imgBox");
+    let Jump=document.querySelectorAll(".JumpBox div");
+    let flex=true;
+    console.log(Jump);
+
+    let now=next=0;
 
 
+    function move() {
+        next++;
+        if (next==imgBox.length){
+            next=0;
+        }
+        imgBox[next].style.left="296px";
+        animate(imgBox[now],{left:-296});
+        animate(imgBox[next],{left:0},function () {
+            flex=true;
+        });
+        Jump[now].className="";
+        Jump[next].className="hot";
+        now=next;
+
+    }
+    function moveL() {
+        next--;
+        if (next<0){
+            next=imgBox.length-1;
+        }
+        imgBox[next].style.left="-296px";
+        animate(imgBox[now],{left:296});
+        animate(imgBox[next],{left:0},function () {
+            flex=true;
+        });
+        Jump[now].className="";
+        Jump[next].className="hot";
+        now=next;
+
+    }
+    // let t=setInterval(move,2000);
+    // SmallBox.onmouseenter=function () {
+    //     clearInterval(t);
+    // };
+    // SmallBox.onmouseleave=function () {
+    //     t=setInterval(move,2000);
+    // };
+    ButtonRight.onclick=function () {
+        if(flex==false){
+            return;
+        }
+        if (next==imgBox.length-1) {
+            return;
+        }
+        flex=false;
+        move();
+
+    }
+    ButtonLeft.onclick=function () {
+        if(flex==false){
+            return;
+        }
+        if(next==0){
+            return;
+        }
+        flex=false;
+        moveL();
+
+    }
+
+    for(let i=0;i<imgBox.length;i++){
+        Jump[i].onclick=function () {
+            if (now==i){
+                return;
+            }else if(now<i){
+                imgBox[i].style.left="296px";
+                animate(imgBox[now],{left:-296});
+                animate(imgBox[i],{left:0});
+                Jump[now].className="";
+                Jump[i].className="hot";
+            }else {
+                imgBox[i].style.left="-296px";
+                animate(imgBox[now],{left:296});
+                animate(imgBox[i],{left:0});
+                Jump[now].className="";
+                Jump[i].className="hot";
+            }
+            next=now=i;
+        }
+    }*/
+    let Box1=document.querySelectorAll(".overlap_Center_Box1");
+    let ButtonLeft=document.querySelector(".Button_Left");
+    let ButtonRight=document.querySelector(".Button_Right");
+    let SmallBox=document.querySelectorAll(".overlap_Bottom_SmallBox");
+    let now=next=0;
+    // console.log(Box1);
+    function moveL() {
+        next++;
+        if (next==Box1.length){
+            next=0;
+        }
+            Box1[next].style.left="296px";
+            animate(Box1[next],{left:0});
+            animate(Box1[now],{left:-296});
+            SmallBox[next].classList.add("hot");
+            SmallBox[now].classList.remove("hot");
+            now=next;
+    }
+    function moveR() {
+        next--;
+        if (next<0){
+            next=Box1.length-1;
+        }
+        Box1[next].style.left="-296px";
+        animate(Box1[next],{left:0});
+        animate(Box1[now],{left:296});
+        SmallBox[next].classList.add("hot");
+        SmallBox[now].classList.remove("hot");
+        now=next;
+    }
+    ButtonLeft.onclick=function () {
+        moveR();
+    };
+    ButtonRight.onclick=function () {
+        moveL();
+    };
+    for (let i=0;i<SmallBox.length;i++){
+        SmallBox[i].onclick=function () {
+            if(now==i){
+                return;
+            }else if (i>now){
+                Box1[i].style.left="296px";
+                animate(Box1[i],{left:0});
+                animate(Box1[now],{left:-296});
+                SmallBox[i].classList.add("hot");
+                SmallBox[now].classList.remove("hot");
+                now=next=i;
+            } else{
+                Box1[i].style.left="-296px";
+                animate(Box1[i],{left:0});
+                animate(Box1[now],{left:296});
+                SmallBox[i].classList.add("hot");
+                SmallBox[now].classList.remove("hot");
+                now=next=i;
+            }
+        }
+    }
+
+    // $(".lisi").hover(fuction(){
+    //     $(this).css("display","none").eq(this.index).css("display","block");
+    // },function () {
+    //     $(this).css("display","none").eq(this.index).css("display","none");
+    // });
+
+    let lisi=document.querySelectorAll(".lisi");
+    let lidiv=document.querySelectorAll(".Eject_01");
+    console.log(lisi,lidiv);
+    lisi.forEach(function (value,index) {
+        value.onmouseenter=function () {
+            lidiv[index].style.bottom="-201px";
+            lidiv[index].style.height="201px";
+            lidiv[index].style.zIndex="1000";
+        }
+        value.onmouseleave=function () {
+            lidiv[index].style.bottom="0px";
+            lidiv[index].style.height="0px";
+            lidiv[index].style.zIndex="0";
+        }
 
 
-
+    })
 }

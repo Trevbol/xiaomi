@@ -130,6 +130,18 @@ a{
     height: 100px;
     background: #ffffff;
     margin: 0 auto;
+    position: relative;
+}
+.Eject_01{
+    width: 1355px;
+    height: 0px;
+    background: #2196f3;
+    position: absolute;
+    left: -70px;
+    bottom: 0px;
+    /*display: none;*/
+    transition: all 0.1s;
+
 }
 .search{
     width: 296px;
@@ -213,13 +225,15 @@ a{
     float: left;
 }
 .nav li{
+    height: 100px;
     float: left;
     font-size: 16px;
     color:#333333;
-    margin-top: 42px;
-    margin-right: 20px;
+    padding-top: 42px;
     cursor: pointer;
     background: #ffffff;
+    padding-right: 20px;
+    padding-left: 5px;
 }
 .nav li:hover{
     color:#ff6700;
@@ -894,13 +908,14 @@ a{
     background: #ff6700;
 }
 .ui-pager{
-    width: 400px;
+    width: 200px;
     height: 10px;
 /*     background: yellow; */
     position:absolute;
-    left: 1000px;
+    right: 100px;
     bottom: 25px;
     z-index: 602;
+    box-sizing: border-box;
 
 }
 
@@ -1160,165 +1175,144 @@ a{
 
 
 /* 内容标签 */
-.bigcontent{
+.content_Box{
     width: 100%;
-    height: 478px;
-    background: #F5F5F5;
+    height: 500px;
+    background: #f5f5f5;
 }
-.content{
+.content_Top{
     width: 1226px;
-    height: 478px;
-/*     background: red; */
+    height: 80px;
     margin: 0 auto;
+    font-size: 21px;
+    line-height: 101px;
+    color: #333333;
 }
-.content_top{
-    width: 1226px;
-    height: 58px;
-/*     background: orange; */
-    overflow: hidden;
-}
-.content_bottom{
+.content_Bottom{
     width: 1226px;
     height: 420px;
-    background: #F5F5F5;
-/*     border-top: 1px solid pink; */
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
 }
-.content_top_wenzi{
-    width: 46px;
-    height: 22px;
- /*    background: green; */
-    margin-top: 18px;
-    font-size: 22px;
-    font-weight: 200;
-    line-height: 22px;
-    color: #333;
-}
-.content_bottom_box{
+.content{
     width: 296px;
-    height: 419px;
-    background: #FFFFFF;
-    float: left;
-    margin-right: 14px;
-    border-top: 1px solid #FFAC13;
+    height: 420px;
+    /*border-top: 1px solid #ffac13;*/
+    /*box-sizing: border-box;*/
+    background: #ffffff;
     position: relative;
-    transition: all 0.6s 0.1s;
 }
-.content_bottom_box:hover{
-    box-shadow: 0 8px 10px 4px rgba(0, 0, 0, 0.1);
-    transform: translateY(-2px);
-}
-.content_bottom li:last-child{
-    margin-right: 0;
-}
-.content_bottom_box_wenzi1{
-    width: 100%;
-    height: 16px;
-    font-size: 16px;
-    line-height: 16px;
-    text-align: center;
-/*     background: yellow; */
-    margin-top: 50px;
-    font-weight: 400;
+.overlap_Top{
+    width: 296px;
+    height: 91px;
+    border-top: 1px solid #ffac13;
+    box-sizing: border-box;
+    background: #ffffff;
+    font-size: 15px;
     color: #ffac13;
+    text-align: center;
+    line-height: 117px;
 }
-.content_bottom_box_wenzi2{
+.overlap_Center{
+    width: 296px;
+    height: 294px;
+    position: relative;
+    overflow: hidden;
+}
+.overlap_Center_Box1{
+    width: 296px;
+    height: 294px;
+    background: #ffffff;
+    position: absolute;
+    left: 0;
+    top: 0;
+}
+.overlap_Bottom{
     width: 100%;
-    height: 20px;
-    font-size: 20px;
-    line-height: 20px;
-    text-align: center;
-/*     background: yellow; */
-    margin-top: 25px;
-    color: #333;
+    height: 35px;
+    /*background: #3a3a3a;*/
 }
-.content_bottom_box_wenzi3{
-    width: 192px;
-/*     height: 20px; */
-    font-size: 12px;
-    line-height: 20px;
-    text-align: center;
-/*     background: yellow; */
+.overlap_Bottom_Box{
+    width: 120px;
+    height: 10px;
+    /*background: orange;*/
     margin: 0 auto;
-    margin-top: 11px;
-    color: #b0b0b0;
+    display: flex;
+    justify-content: space-between;
 }
-.content_bottom_box_wenzi4{
-    width: 100%;
-    height: 13px;
-    font-size: 13px;
-    line-height: 13px;
-    text-align: center;
-/*     background: yellow; */
-    margin-top: 20px;
-    margin-bottom: 15px;
-    color: #333;
-}
-.content_bottom_box_img{
-    width: 216px;
-    height: 154px;
-    margin: 0 auto;
-    background: red;
-}
-.content_bottom_box_img img{
-    width: 216px;
-    height: 154px;
-}
-.content_bottom li:nth-child(2){
-    border-top: 1px solid #83C44E;
-}
-.content_bottom li:nth-child(3){
-    border-top: 1px solid #E53935;   
-}
-.content_bottom li:nth-child(4){
-    border-top: 1px solid #2196F3;    
-}
-.content_bottom_box_fudian{
-    width: 114px;   
-    height: 6px;
-    background: red;
-    margin: 0 auto;
-}
-.content_bottom_box_fudian_yuanquan1{
+.overlap_Bottom_SmallBox{
     width: 6px;
     height: 6px;
-    background: #FFFFFF;
+    background: #b0b0b0;
+    border: 2px solid #ffffff;
     border-radius: 50%;
+}
+.hot{
     border: 2px solid #ff6700;
-    float: left;
-    margin-right: 22px;
+    background: #ffffff;
+}
+.overlap_Center_Box1 h3{
+    height: 17px;
+    font-size: 19px;
+    color: #333333;
+    text-align: center;
+    line-height: 17px;
+    font-weight: normal;
+}
+.overlap_Center_Box1 h4{
+    width: 192px;
+    height: 31px;
+    font-size: 11px;
+    color: #b0b0b0;
+    text-align: center;
+    margin: 12px auto 0;
+    /*line-height: 17px;*/
+    font-weight: normal;
+}
+.overlap_Center_Box1 h5{
+    height: 12px;
+    font-size: 12px;
+    color: #333333;
+    text-align: center;
+    color: #333333;
+    /*line-height: 17px;*/
+    margin: 19px auto 0;
+    font-weight: normal;
+}
+.overlap_Center_Box1 img{
+    width: 216px;
+    height: 154px;
+    display: block;
+    margin: 15px auto 0;
+}
+
+.Button_Left{
+    width: 24px;
+    height: 44px;
+    background: orange;
     position: absolute;
-    bottom: 27px;
-    left: 100px;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    margin: auto 0;
+    /*display: none;*/
+    z-index: 999;
 }
-.content_bottom_box_fudian_yuanquan:hover{
-    background: #ff6700;
-}
-.content_bottom_box_fudian_yuanquan1:hover{
-    background: #FFFFFF;
-}
-.content_bottom_box_fudian_yuanquan2{
-    width: 6px;
-    height: 6px;
-    background: #B0B0B0;
-    border-radius: 50%;
-    border: 0px solid #B0B0B0;
-    float: left;
-    margin-right: 22px;
+.content:hover.Button_Left{
+     display: block;
+ }
+.Button_Right{
+    width: 24px;
+    height: 44px;
+    background: orange;
     position: absolute;
-    bottom: 29px;
-    left: 134px;
-}
-.content_bottom_box_fudian_yuanquan3{
-    width: 6px;
-    height: 6px;
-    background: #B0B0B0;
-    border-radius: 50%;
-    border: 0px solid #B0B0B0;
-    float: left;
-    margin-right: 22px;
-    position: absolute;
-    bottom: 29px;
-    left: 168px;    
+    top: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 999;
+    margin: auto 0;
+    /*display: none;*/
 }
 /* 内容标签 */
 
